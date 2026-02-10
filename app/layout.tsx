@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Julie Stromwall | Product Manager",
   description:
     "Julie Stromwall — Product Manager building thoughtful digital products.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

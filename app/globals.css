@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme inline {
   --color-cream: #FAF7F2;
   --color-cream-dark: #F0EBE3;
@@ -10,6 +12,11 @@
   --color-terracotta-light: #FBF0EB;
   --color-charcoal: #1A1A1A;
   --color-muted: #6B7280;
+  --color-dark-bg: #0c0c10;
+  --color-dark-surface: #141419;
+  --color-dark-card: #1c1c24;
+  --color-dark-text: #e8e6e1;
+  --color-dark-muted: #9ca3af;
   --font-sans: var(--font-inter);
 }
 
@@ -17,6 +24,11 @@ body {
   background: var(--color-cream);
   color: var(--color-charcoal);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.dark body {
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text);
 }
 
 @keyframes marquee {
@@ -34,4 +46,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Smooth transition for dark mode */
+html.transitioning,
+html.transitioning *,
+html.transitioning *::before,
+html.transitioning *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
