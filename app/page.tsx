@@ -40,16 +40,16 @@ const PROJECTS = [
     videos: [],
   },
   {
-    title: "0\u21921 Sales & Commission Tracking Platform",
+    title: "RepCommish \u2014 Sales & Commission Tracking Platform",
     description:
-      "Designed and built a custom commission tracking platform to help sales reps accurately record deals, calculate commissions, and track payments owed versus paid. Led the product from concept through delivery, translating real-world sales workflows into a simple, reliable system that eliminates manual spreadsheets and improves financial visibility for reps.",
+      "Founded and built RepCommish, a commission tracking platform that helps sales reps accurately record deals, calculate commissions, and track payments owed versus paid. Took the product from concept to live business \u2014 defining the vision, designing the system, and building it from the ground up. RepCommish replaces manual spreadsheets with a simple, reliable platform that gives reps real financial visibility.",
     tags: ["0\u21921 Product", "FinTech-lite", "Workflow Automation", "Data Accuracy"],
     color: "bg-terracotta-light dark:bg-terracotta/10",
     borderColor: "border-terracotta",
     images: [
-      { src: "/projects/commission/commission-view.png", label: "Commission Tracking", group: "App" },
-      { src: "/projects/commission/sales-view.png", label: "Sales Dashboard", group: "App" },
-      { src: "/projects/commission/companies-view.png", label: "Companies", group: "App" },
+      { src: "/projects/commission/slide-1.png", label: "Dashboard", group: "App" },
+      { src: "/projects/commission/slide-2.png", label: "Commission Detail", group: "App" },
+      { src: "/projects/commission/slide-3.png", label: "Brand Detail", group: "App" },
     ],
     videos: [],
   },
