@@ -22,10 +22,11 @@
 | Project | Images | Videos | Card Layout |
 |---------|--------|--------|-------------|
 | Medical Records & Review Platform | 4 screenshots | — | Wide staggered fan |
-| Sales & Commission Tracking | 3 screenshots | — | Centered vertical, crooked |
+| RepCommish — Sales & Commission Tracking | 3 screenshots (slide-1, slide-2, slide-3) | — | Centered vertical, crooked |
 | Journey Management System | 4 screenshots | — | Cascading diagonal |
 | Provider Network Platform | — | 2 YouTube videos | Stacked crooked thumbnails |
 
 ## Changelog
 
+- **2026-02-16:** Updated RepCommish project: new screenshots, founder-focused title & description
 - **2026-02-10:** Dark mode, password protection, JS logo, project card layouts, hero/about/work redesigns, deployment zip

@@ -1,5 +1,25 @@
 # Session Log
 
+## 2026-02-16
+
+**Worked on:** Updated RepCommish project card — new screenshots, renamed project, rewrote description to reflect founder role.
+
+**Changes made:**
+- Replaced 3 commission project screenshots with new RepCommish app slides (Dashboard, Commission Detail, Brand Detail) from `~/Downloads/`
+- Renamed project from "0→1 Sales & Commission Tracking Platform" to "RepCommish — Sales & Commission Tracking Platform"
+- Rewrote project description with founder-focused language ("Founded and built RepCommish..." instead of generic PM copy)
+- Kept same 3-image centered vertical crooked card layout
+- Built static export and created fresh `portfolio-site.zip` on Desktop for Hostinger upload
+- Committed and pushed all changes to GitHub
+
+**Next steps:**
+- Upload `portfolio-site.zip` to Hostinger file manager → extract in `public_html` for juliestromwall.com
+- Test live site end-to-end after upload
+- Clean up unused old commission screenshots (`commission-view.png`, `sales-view.png`, `companies-view.png`) from `public/projects/commission/`
+
+**Open questions:**
+- None
+
 ## 2026-02-10
 
 **Worked on:** Major portfolio site enhancements — dark mode, password protection, project card layouts, JS logo, hero/about/work section redesigns, deployment prep.
