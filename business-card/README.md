@@ -3,8 +3,8 @@
 Black card, double-sided. Back is the `js.` monogram on charcoal in every variant. The right
 third of the front is a swappable panel — photo or graphic — driven by a class on `.front`.
 
-**Currently deciding between three less-wordy service fronts** (`option-E/F/G`, compared in
-`preview-redesign.png`). Photo variants are kept in `card.html` in case they come back.
+**Shipping:** `card-final_*` — black card, icon rail (Build / Launch / Support), monogram back.
+Other variants stay in `card.html` behind classes, including the photo versions.
 
 ## Files
 
@@ -12,10 +12,7 @@ third of the front is a swappable panel — photo or graphic — driven by a cla
 |---|---|
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
-| `card-final-teal-edge_*.pdf` | Alternate: adds a teal hairline where the photo meets the black. |
-| `option-E-icons_*.pdf` | Icon + word rail — no numbers, no descriptors |
-| `option-F-words_*.pdf` | Words only with dot markers, maximum air |
-| `option-G-band_*.pdf` | Services as a typographic band across the bottom |
+| `card-final-teal-edge_*.pdf` | Older photo-panel alternate, kept for reference. |
 
 | Other file | Use |
 |---|---|
@@ -40,15 +37,18 @@ third of the front is a swappable panel — photo or graphic — driven by a cla
 > **Ask for a rich black build, not 100% K.** The card is black on both sides — heavy ink
 > coverage. Flat 100% K prints as washed-out dark gray at this scale.
 
-> **Photo resolution.** The panel image is 930×1350 embedded, printing 1.55" wide — about
-> 600 dpi, double the 300 dpi minimum. It'll be sharp.
+> **All vector.** The shipping card has no raster art — type and SVG icons only, so it's
+> resolution-independent. (The photo variants embed 930×1350, ~600 dpi at print size.)
+
+> **Support icon.** Currently a wrench. Swap the third `<svg>` in `.icons` for a chat bubble,
+> shield, or headset if you'd rather — all four were mocked up and read clearly at 0.155".
 
 ## Editing
 
 Everything lives in `card.html`. The layout is driven by classes on `.front`:
 
 ```
-class="card front dark photo-panel no-edge"   <- what ships
+class="card front dark art-icons no-tag"   <- what ships
 ```
 
 | Class | Effect |

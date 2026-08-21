@@ -30,12 +30,13 @@
 
 | Piece | Location | Description |
 |---|---|---|
-| Business Card | `business-card/card.html` | Double-sided 3.5×2" black card. Front: name, positioning line, contact, full-bleed photo panel. Back: `js.` monogram on charcoal. Layout driven by classes on `.front` (`dark`, `photo-panel`, `no-edge`, `photo-lg`, `photo-fade`); `--bleed` toggles trim vs bleed output. Renders to print-ready PDFs via Playwright. |
+| Business Card | `business-card/card.html` | Double-sided 3.5×2" black card. Front: name, positioning line, contact, and a Build/Launch/Support icon rail. Back: `js.` monogram on charcoal. Layout driven by classes on `.front` (`dark`, `art-icons`, `art-words`, `art-band`, `art-rail`, `photo-panel`, …); `--bleed` toggles trim vs bleed output. Renders to print-ready PDFs via Playwright. |
 | Invoice Template | `invoices/TEMPLATE.html` | Branded invoice matching the same palette and type. Not committed (contains client billing data). |
 
 ## Changelog
 
-- **2026-08-21:** Business card finalized — full-bleed photo panel, left accent bar removed, text shifted left, photo widened to 1.55"
+- **2026-08-21:** Business card finalized — icon rail (Build / Launch / Support, wrench for Support), no photo
+- **2026-08-21:** Business card — full-bleed photo panel, left accent bar removed, text shifted left, photo widened to 1.55"
 - **2026-08-21:** Business card — four photo treatments (small circle, large circle, full-bleed panel, faded panel)
 - **2026-08-21:** Business card — added headshot and a black-front variant alongside the cream one
 - **2026-08-21:** Business card designed (`business-card/`) — matches site palette, Inter, and js monogram; print-ready PDFs with bleed
