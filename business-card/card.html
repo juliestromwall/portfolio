@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Business Card — Julie Stromwall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF7F2;
+    --cream-dark:#F0EBE3;
+    --teal:#2D9B8A;
+    --teal-dark:#237A6D;
+    --terracotta:#C4714E;
+    --charcoal:#1A1A1A;
+    --muted:#6B7280;
+
+    /* 3.5 x 2 in trim + 0.125 in bleed on every edge */
+    --bleed: 0.125in;
+    --trim-w: 3.5in;
+    --trim-h: 2in;
+    --card-w: calc(var(--trim-w) + var(--bleed) * 2);
+    --card-h: calc(var(--trim-h) + var(--bleed) * 2);
+    --safe: calc(var(--bleed) + 0.25in);   /* 0.25in inside the trim edge */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @page{ size: 3.75in 2.25in; margin:0; }
+
+  .card{
+    width:var(--card-w);
+    height:var(--card-h);
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+    break-after:page;
+  }
+  .card:last-child{page-break-after:auto;break-after:auto;}
+
+  /* ---------------- FRONT ---------------- */
+  .front{ background:var(--cream); }
+
+  /* thin teal spine along the left trim edge, runs full bleed */
+  .front .spine{
+    position:absolute; top:0; bottom:0;
+    left:0;
+    width:calc(var(--bleed) + 0.06in);
+    background:var(--teal);
+  }
+
+  .front .inner{
+    position:absolute;
+    top:var(--safe); right:var(--safe); bottom:var(--safe); left:calc(var(--safe) + 0.085in);
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+
+  .name{
+    font-size:18.5pt;
+    font-weight:800;
+    letter-spacing:-0.025em;
+    line-height:1;
+    color:var(--charcoal);
+  }
+
+  .rule{
+    width:0.42in; height:2.4px;
+    background:var(--terracotta);
+    border-radius:2px;
+    margin:7px 0 9px;
+  }
+
+  .offer{
+    font-size:9.2pt;
+    font-weight:600;
+    line-height:1.32;
+    letter-spacing:-0.005em;
+    color:var(--teal-dark);
+  }
+  .offer .b{ display:block; }
+
+  .tag{
+    margin-top:5px;
+    font-size:7pt;
+    font-weight:500;
+    letter-spacing:0.02em;
+    color:var(--muted);
+  }
+
+  .contact{
+    display:flex;
+    flex-direction:column;
+    gap:3.5px;
+  }
+  .contact .row{
+    display:flex; align-items:center; gap:6px;
+    font-size:8pt;
+    font-weight:500;
+    color:var(--charcoal);
+    letter-spacing:0.002em;
+  }
+  .contact .row svg{
+    width:9.5px; height:9.5px;
+    flex:none;
+    color:var(--teal);
+  }
+  .contact .row.site{ font-weight:600; }
+
+  /* ---------------- BACK ---------------- */
+  .back{
+    background:var(--charcoal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .back .mark{
+    display:flex;
+    align-items:flex-end;
+    gap:0.005in;
+    position:relative;
+    /* nudge optically centred within the trim area */
+    transform:translateY(-0.045in);
+  }
+  .back .glyph{
+    font-size:76pt;
+    font-weight:800;
+    letter-spacing:-0.055em;
+    line-height:0.86;
+  }
+  .back .j{ color:var(--cream); }
+  .back .s{ color:var(--teal); }
+  .back .dot{
+    width:0.115in; height:0.115in;
+    border-radius:50%;
+    background:var(--terracotta);
+    margin-left:0.06in;
+    margin-bottom:0.085in;
+    flex:none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ FRONT ============ -->
+<section class="card front">
+  <div class="spine"></div>
+  <div class="inner">
+
+    <header>
+      <div class="name">Julie Stromwall</div>
+      <div class="rule"></div>
+      <div class="offer">
+        <span class="b">Custom Websites &amp; Software</span>
+        <span class="b">for Small Business</span>
+      </div>
+      <div class="tag">Built, launched, and supported.</div>
+    </header>
+
+    <div class="contact">
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        970.333.4481
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 8.89 5.26a2 2 0 0 0 2.22 0L22 7"/>
+        </svg>
+        hello@juliestromwall.com
+      </div>
+      <div class="row site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        juliestromwall.com
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ BACK ============ -->
+<section class="card back">
+  <div class="mark">
+    <span class="glyph j">j</span><span class="glyph s">s</span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+</body>
+</html>

@@ -43,3 +43,6 @@ next-env.d.ts
 # local artifacts / design sources
 *.zip
 *.psd
+
+# client billing data — keep out of the public repo
+/invoices/

@@ -26,7 +26,15 @@
 | Journey Management System | 4 screenshots | — | Cascading diagonal |
 | Provider Network Platform | — | 2 YouTube videos | Stacked crooked thumbnails |
 
+## Brand Collateral
+
+| Piece | Location | Description |
+|---|---|---|
+| Business Card | `business-card/card.html` | Double-sided 3.5×2" card. Front: name, "Custom Websites & Software for Small Business", phone/email/site. Back: `js.` monogram on charcoal. Renders to print-ready PDF (with bleed + trim versions) via Playwright. |
+| Invoice Template | `invoices/TEMPLATE.html` | Branded invoice matching the same palette and type. Not committed (contains client billing data). |
+
 ## Changelog
 
+- **2026-08-21:** Business card designed (`business-card/`) — matches site palette, Inter, and js monogram; print-ready PDFs with bleed
 - **2026-02-16:** Updated RepCommish project: new screenshots, founder-focused title & description
 - **2026-02-10:** Dark mode, password protection, JS logo, project card layouts, hero/about/work redesigns, deployment zip
