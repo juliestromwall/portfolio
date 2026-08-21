@@ -13,6 +13,7 @@ directions — different typefaces, palettes, and structures — compared in
 |---|---|
 | `dir-A-editorial-serif_*.pdf` | Fraunces on cream, hairline rules, italic kicker |
 | `dir-B-spec-sheet_*.pdf` | IBM Plex Mono, key/value rows on near-black |
+| `dir-C-black_*.pdf` | Direction C recoloured black — terracotta kicker, teal services |
 | `dir-C-colour-block_*.pdf` | Anton on a full terracotta field |
 | `dir-D-swiss-grid_*.pdf` | Archivo Narrow, hairline column grid on cream |
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
@@ -56,6 +57,9 @@ directions — different typefaces, palettes, and structures — compared in
   `photo-*` variants.
 
 Fonts come from Google Fonts at render time: Fraunces, IBM Plex Mono, Anton, Archivo Narrow.
+
+> **Don't put the mark on a terracotta field.** Its terracotta dot matches the background and
+> bites a notch out of the disc, which reads as a printing defect. Charcoal or cream only.
 
 The **`js.` mark is the portfolio original** (`../public/js-logo.png`), embedded once as the
 `--logo` CSS variable and drawn via `.logo`. It is never re-typeset in a direction's own
