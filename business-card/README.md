@@ -1,25 +1,38 @@
 # Business Card — Julie Stromwall
 
-Two variants of the same layout. Pick one and print it; the other is there so you can compare.
-
-| Variant | Front | Back |
-|---|---|---|
-| **A** | Cream (#FAF7F2) | Black `js.` monogram |
-| **B** | Black (#1A1A1A) | Black `js.` monogram |
+Front carries the name, positioning line, contact, and a headshot. Back is the `js.` monogram
+on charcoal in every variant.
 
 ## Files
 
-| File | Use |
-|---|---|
-| `A_cream-front_PRINT-with-bleed.pdf` | Variant A — **send to printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
-| `B_black-front_PRINT-with-bleed.pdf` | Variant B — **send to printer.** Same specs. |
-| `A_cream-front_TRIM-3.5x2.pdf` / `B_black-front_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
-| `preview-options.png` | Both variants side by side. |
-| `card.html` | Source. The photo is embedded as base64, so the file is self-contained. |
-| `julie-headshot.jpg` / `julie-headshot-circle.png` | Cropped headshot (square + circular alpha) for reuse elsewhere. |
+Five fronts, one back. Every front is the same source file with a different class on
+`.front` — pick one, and I'll cut the matching trim-size PDF.
 
-The two variants come from **one** source file — variant B is variant A with `class="dark"`
-added to `.front`. Edit `card.html` once and both re-render.
+| PDF | Front |
+|---|---|
+| `card-cream-circle_PRINT-with-bleed.pdf` | Cream, 0.95" circular photo |
+| `card-black-circle_PRINT-with-bleed.pdf` | Black, 0.95" circular photo |
+| `card-black-circle-lg_PRINT-with-bleed.pdf` | Black, 1.18" circular photo |
+| `card-black-panel_PRINT-with-bleed.pdf` | Black, full-bleed photo panel with teal edge |
+| `card-black-panel-fade_PRINT-with-bleed.pdf` | Black, photo panel fading into the black |
+
+All are 3.75×2.25" (3.5×2 trim + 0.125" bleed), p1 front / p2 back.
+
+| Other file | Use |
+|---|---|
+| `preview-photo-options.png` | The four black variants side by side |
+| `card.html` | Source. Photos embedded as base64, so it's self-contained. |
+| `julie-headshot.jpg` / `-circle.png` / `-panel.jpg` | Cropped headshots for reuse elsewhere |
+
+### Switching variants
+
+```
+class="card front"                    cream, small circle
+class="card front dark"               black, small circle
+class="card front dark photo-lg"      black, large circle
+class="card front dark photo-panel"   black, full-bleed panel
+class="card front dark photo-fade"    black, faded panel
+```
 
 ## Print specs
 
@@ -35,11 +48,12 @@ added to `.front`. Edit `card.html` once and both re-render.
 | Teal | `#2D9B8A` | 71 / 12 / 51 / 1 |
 | Terracotta | `#C4714E` | 17 / 63 / 74 / 3 |
 
-> **Ask for a rich black build, not 100% K.** Variant B is black on both sides — heavy ink
-> coverage. Flat 100% K prints as a washed-out dark gray at that scale.
+> **Ask for a rich black build, not 100% K.** The black variants are black on both sides —
+> heavy ink coverage. Flat 100% K prints as a washed-out dark gray at that scale.
 
-> **Photo check.** The headshot prints at 0.95" across; the embedded image is 760px, ~800 dpi.
-> Well above the 300 dpi minimum, so it'll be sharp.
+> **Photo resolution.** Circle variants embed a 760px image (~800 dpi at 0.95", ~640 dpi at
+> 1.18"). Panel variants embed 810×1349 (~600 dpi at 1.35" wide). All well above the 300 dpi
+> minimum, so every option prints sharp.
 
 ## Re-rendering after edits
 
@@ -72,5 +86,7 @@ PY
 - Palette, type (Inter), and the `js.` monogram match the portfolio site and the invoice
   template in `../invoices/` — the three pieces read as one brand.
 - The teal spine bleeds off the left edge, so a slightly off cut won't leave a sliver.
-- The terracotta dot on the portrait sits at 45° on the ring, echoing the dot in the monogram.
+- The terracotta dot on the circular portraits sits at 45° on the ring, echoing the monogram's dot.
+- Panel variants bleed the photo off the top, right, and bottom edges, so a shifted cut can't
+  leave a white sliver beside it.
 - Bleed is a CSS variable, so the trim and bleed PDFs fall out of the same markup.
