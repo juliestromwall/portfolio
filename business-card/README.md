@@ -11,10 +11,10 @@ directions — different typefaces, palettes, and structures — compared in
 
 | PDF | Use |
 |---|---|
-| `dir-A-editorial-serif_PRINT-with-bleed.pdf` | Fraunces on cream, hairline rules, italic kicker |
-| `dir-B-spec-sheet_PRINT-with-bleed.pdf` | IBM Plex Mono, key/value rows on near-black |
-| `dir-C-colour-block_PRINT-with-bleed.pdf` | Anton on a full terracotta field |
-| `dir-D-swiss-grid_PRINT-with-bleed.pdf` | Archivo Narrow, hairline column grid on cream |
+| `dir-A-editorial-serif_*.pdf` | Fraunces on cream, hairline rules, italic kicker |
+| `dir-B-spec-sheet_*.pdf` | IBM Plex Mono, key/value rows on near-black |
+| `dir-C-colour-block_*.pdf` | Anton on a full terracotta field |
+| `dir-D-swiss-grid_*.pdf` | Archivo Narrow, hairline column grid on cream |
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
 
@@ -56,6 +56,12 @@ directions — different typefaces, palettes, and structures — compared in
   `photo-*` variants.
 
 Fonts come from Google Fonts at render time: Fraunces, IBM Plex Mono, Anton, Archivo Narrow.
+
+The **`js.` mark is the portfolio original** (`../public/js-logo.png`), embedded once as the
+`--logo` CSS variable and drawn via `.logo`. It is never re-typeset in a direction's own
+typeface — the mark stays fixed while everything around it changes. At 0.82–0.9" it prints
+around 580 dpi. On the charcoal backs the mark's disc matches the card, so only the letters
+and the terracotta dot read; on cream the full disc shows as a badge.
 
 > **`Est. Colorado`** on the back of direction A is copy I wrote, inferred from the 970 area
 > code. Change or drop it — it is not sourced from anything you gave me.
