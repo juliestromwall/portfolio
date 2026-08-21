@@ -88,25 +88,25 @@ const ABOUT_ITEMS = [
     icon: "discovery",
     title: "Discovery & Strategy",
     description:
-      "I dig into the \u2018why\u2019 before the \u2018what.\u2019 Through customer research, data analysis, and stakeholder alignment, I identify the right problems to solve and build conviction around a clear product direction.",
+      "I find the real problem before anyone writes a ticket. Customer research, hard data, and honest conversations with stakeholders \u2014 until the direction is obvious and the whole team believes it.",
   },
   {
     icon: "compliance",
     title: "Data & Compliance",
     description:
-      "I navigate complex regulatory requirements and data-driven workflows \u2014 from HIPAA to sensitive operational data \u2014 ensuring products are built right and stay compliant at scale.",
+      "HIPAA, sensitive operational data, auditors who ask pointed questions. I treat constraints as design inputs rather than blockers, so what ships is compliant the first time instead of retrofitted later.",
   },
   {
     icon: "build",
     title: "Build & Ship",
     description:
-      "I work side-by-side with engineering and design to turn strategy into reality. I break down complexity, remove blockers, and drive execution so products actually launch \u2014 not just get planned.",
+      "I sit with engineering and design, not above them. I break down the complexity, clear the blockers, and keep the thing moving until it is genuinely in production \u2014 not just well planned.",
   },
   {
     icon: "grow",
     title: "Grow & Iterate",
     description:
-      "Shipping is just the beginning. I measure what matters, listen to users, and iterate quickly to drive adoption, retention, and real business impact after launch.",
+      "Launch is the midpoint, not the finish line. I watch what users actually do, cut what is not working, and keep iterating until adoption and retention move in the right direction.",
   },
 ];
 
@@ -305,8 +305,9 @@ export default function Home() {
               </h1>
 
               <p className="max-w-lg text-base leading-relaxed text-charcoal/70 dark:text-dark-text/70 md:text-lg">
-                I build thoughtful digital products by connecting customer
-                needs, product strategy, data-driven insights, and delivery.
+                I take products from zero to one &mdash; in healthcare,
+                compliance, and other places where &ldquo;move fast and break
+                things&rdquo; was never an option.
               </p>
 
               <div className="mt-14 flex gap-4">
@@ -380,18 +381,20 @@ export default function Home() {
           {/* Two-column bio */}
           <div className="mb-16 grid gap-8 md:grid-cols-2 md:gap-12 items-start mx-auto max-w-4xl">
             <p className="text-base leading-relaxed text-charcoal/70 dark:text-dark-text/70">
-              I&apos;m a product manager who specializes in taking products from
-              zero to one. From discovery to delivery, I connect the dots
-              between what customers need, what the business requires, and
-              what teams can build &mdash; then I make sure it actually ships.
+              I build in the messy middle &mdash; where the requirements are
+              half-formed, the compliance stakes are real, and something still
+              has to ship. I&apos;d rather run the hard discovery myself than
+              inherit a tidy spec nobody validated. Zero to one is where
+              I&apos;m most useful.
             </p>
             <p className="text-base leading-relaxed text-charcoal/50 dark:text-dark-text/50 border-l-2 border-terracotta/30 pl-6">
-              As a 3x gestational surrogate and lifelong empath, I&apos;m
-              especially driven to build tools that support people through
-              complex, emotional journeys. Beyond work, I&apos;m married to my
-              junior-high sweetheart, a mom of two, a rescue-dog enthusiast,
-              and I recharge through snowboarding, wakesurfing, hiking,
-              backpacking, and volunteering.
+              Three-time gestational surrogate &mdash; which taught me exactly
+              how it feels to be on the receiving end of a badly designed
+              process. It&apos;s why I build for people moving through
+              complicated, high-stakes moments. Off the clock: married to my
+              junior-high sweetheart, mom of two, rescue-dog enthusiast, and
+              happiest snowboarding, wakesurfing, or somewhere down a trail
+              with a pack on.
             </p>
           </div>
 
@@ -608,7 +611,7 @@ export default function Home() {
             <div className="h-px w-12 bg-teal/40" />
           </div>
           <p className="text-xl font-light italic tracking-wide text-cream/90 dark:text-dark-text/90 md:text-2xl">
-            &ldquo;Comfortable in ambiguity. Effective in execution.&rdquo;
+            &ldquo;Comfortable in ambiguity. Relentless in execution.&rdquo;
           </p>
         </div>
       </section>
@@ -625,8 +628,8 @@ export default function Home() {
             </h2>
             <div className="mx-auto mb-8 h-1 w-16 rounded-full bg-terracotta" />
             <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-charcoal/60 dark:text-dark-text/60">
-              Interested in working together, have a question, or just want to
-              say hello? I&apos;d love to hear from you.
+              Building something ambitious, complicated, or both? I&apos;d
+              like to hear about it.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
