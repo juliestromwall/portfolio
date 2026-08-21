@@ -30,11 +30,12 @@
 
 | Piece | Location | Description |
 |---|---|---|
-| Business Card | `business-card/card.html` | Double-sided 3.5×2" card. Front: name, "Custom Websites & Software for Small Business", phone/email/site. Back: `js.` monogram on charcoal. Renders to print-ready PDF (with bleed + trim versions) via Playwright. |
+| Business Card | `business-card/card.html` | Double-sided 3.5×2" card. Front: name, positioning line, contact, circular headshot. Back: `js.` monogram on charcoal. Two variants from one source (cream or black front) via a `.dark` class. Renders to print-ready PDFs (bleed + trim) via Playwright. |
 | Invoice Template | `invoices/TEMPLATE.html` | Branded invoice matching the same palette and type. Not committed (contains client billing data). |
 
 ## Changelog
 
+- **2026-08-21:** Business card — added headshot and a black-front variant alongside the cream one
 - **2026-08-21:** Business card designed (`business-card/`) — matches site palette, Inter, and js monogram; print-ready PDFs with bleed
 - **2026-02-16:** Updated RepCommish project: new screenshots, founder-focused title & description
 - **2026-02-10:** Dark mode, password protection, JS logo, project card layouts, hero/about/work redesigns, deployment zip
