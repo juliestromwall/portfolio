@@ -1,38 +1,21 @@
 # Business Card — Julie Stromwall
 
-Front carries the name, positioning line, contact, and a headshot. Back is the `js.` monogram
-on charcoal in every variant.
+Black card. Front: name, positioning line, contact, and a full-bleed photo panel down the
+right. Back: the `js.` monogram on charcoal.
 
 ## Files
 
-Five fronts, one back. Every front is the same source file with a different class on
-`.front` — pick one, and I'll cut the matching trim-size PDF.
-
-| PDF | Front |
+| PDF | Use |
 |---|---|
-| `card-cream-circle_PRINT-with-bleed.pdf` | Cream, 0.95" circular photo |
-| `card-black-circle_PRINT-with-bleed.pdf` | Black, 0.95" circular photo |
-| `card-black-circle-lg_PRINT-with-bleed.pdf` | Black, 1.18" circular photo |
-| `card-black-panel_PRINT-with-bleed.pdf` | Black, full-bleed photo panel with teal edge |
-| `card-black-panel-fade_PRINT-with-bleed.pdf` | Black, photo panel fading into the black |
-
-All are 3.75×2.25" (3.5×2 trim + 0.125" bleed), p1 front / p2 back.
+| `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
+| `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
+| `card-final-teal-edge_*.pdf` | Alternate: adds a teal hairline where the photo meets the black. |
 
 | Other file | Use |
 |---|---|
-| `preview-photo-options.png` | The four black variants side by side |
+| `preview-final.png` | Front + back at trim size — what you actually get after cutting |
 | `card.html` | Source. Photos embedded as base64, so it's self-contained. |
-| `julie-headshot.jpg` / `-circle.png` / `-panel.jpg` | Cropped headshots for reuse elsewhere |
-
-### Switching variants
-
-```
-class="card front"                    cream, small circle
-class="card front dark"               black, small circle
-class="card front dark photo-lg"      black, large circle
-class="card front dark photo-panel"   black, full-bleed panel
-class="card front dark photo-fade"    black, faded panel
-```
+| `julie-headshot*.{jpg,png}` | Cropped headshots (square, circular, panel) for reuse elsewhere |
 
 ## Print specs
 
@@ -43,19 +26,37 @@ class="card front dark photo-fade"    black, faded panel
 
 | Color | Hex | Approx CMYK |
 |---|---|---|
-| Cream | `#FAF7F2` | 1 / 2 / 4 / 0 |
 | Charcoal | `#1A1A1A` | 0 / 0 / 0 / 90 |
 | Teal | `#2D9B8A` | 71 / 12 / 51 / 1 |
 | Terracotta | `#C4714E` | 17 / 63 / 74 / 3 |
+| Cream (type) | `#FAF7F2` | 1 / 2 / 4 / 0 |
 
-> **Ask for a rich black build, not 100% K.** The black variants are black on both sides —
-> heavy ink coverage. Flat 100% K prints as a washed-out dark gray at that scale.
+> **Ask for a rich black build, not 100% K.** The card is black on both sides — heavy ink
+> coverage. Flat 100% K prints as washed-out dark gray at this scale.
 
-> **Photo resolution.** Circle variants embed a 760px image (~800 dpi at 0.95", ~640 dpi at
-> 1.18"). Panel variants embed 810×1349 (~600 dpi at 1.35" wide). All well above the 300 dpi
-> minimum, so every option prints sharp.
+> **Photo resolution.** The panel image is 930×1350 embedded, printing 1.55" wide — about
+> 600 dpi, double the 300 dpi minimum. It'll be sharp.
 
-## Re-rendering after edits
+## Editing
+
+Everything lives in `card.html`. The layout is driven by classes on `.front`:
+
+```
+class="card front dark photo-panel no-edge"   <- what ships
+```
+
+| Class | Effect |
+|---|---|
+| `dark` | black front (omit for cream) |
+| `photo-panel` | full-bleed photo panel; hides the left accent bar, moves text left |
+| `no-edge` | drops the teal hairline beside the photo |
+| `photo-lg` | large circular photo instead of the panel |
+| `photo-fade` | photo panel gradient-faded into the black |
+
+`--panel-w` in `:root` controls how wide the photo is; `--bleed` set to `0in` yields the
+trim-size render. Both PDFs come from the same markup.
+
+### Re-rendering after edits
 
 ```bash
 cd business-card
@@ -67,16 +68,15 @@ PDF = dict(print_background=True, margin={'top':'0','bottom':'0','left':'0','rig
 with sync_playwright() as p:
     b = p.chromium.launch()
     pg = b.new_page(device_scale_factor=4)
-    for tag, dark in (('A_cream-front', False), ('B_black-front', True)):
-        pg.goto(u); pg.wait_for_load_state('networkidle')
-        if dark:
-            pg.evaluate("document.querySelector('.front').classList.add('dark')")
-            pg.wait_for_timeout(150)
-        pg.pdf(path=f'{tag}_PRINT-with-bleed.pdf', width='3.75in', height='2.25in', **PDF)
-        pg.locator('.front').screenshot(path=f"v-{'dark' if dark else 'light'}-front.png")
-        if not dark: pg.locator('.back').screenshot(path='v-back.png')
-        pg.add_style_tag(content=':root{--bleed:0in !important;}')
-        pg.pdf(path=f'{tag}_TRIM-3.5x2.pdf', width='3.5in', height='2in', **PDF)
+    pg.goto(u); pg.wait_for_load_state('networkidle')
+    pg.evaluate("document.querySelector('.front').className = 'card front dark photo-panel no-edge'")
+    pg.wait_for_timeout(180)
+    pg.pdf(path='card-final_PRINT-with-bleed.pdf', width='3.75in', height='2.25in', **PDF)
+    pg.add_style_tag(content=':root{--bleed:0in !important;}')
+    pg.wait_for_timeout(150)
+    pg.pdf(path='card-final_TRIM-3.5x2.pdf', width='3.5in', height='2in', **PDF)
+    pg.locator('.front').screenshot(path='card-final-front.png')
+    pg.locator('.back').screenshot(path='card-final-back.png')
     b.close()
 PY
 ```
@@ -85,8 +85,8 @@ PY
 
 - Palette, type (Inter), and the `js.` monogram match the portfolio site and the invoice
   template in `../invoices/` — the three pieces read as one brand.
-- The teal spine bleeds off the left edge, so a slightly off cut won't leave a sliver.
-- The terracotta dot on the circular portraits sits at 45° on the ring, echoing the monogram's dot.
-- Panel variants bleed the photo off the top, right, and bottom edges, so a shifted cut can't
-  leave a white sliver beside it.
-- Bleed is a CSS variable, so the trim and bleed PDFs fall out of the same markup.
+- The photo bleeds off the top, right, and bottom, so a shifted cut can't leave a white sliver.
+- The panel crop is deliberately tighter than the panel's aspect ratio, so widening the frame
+  scales the subject up rather than just revealing more background.
+- The teal in the shirt is close enough to the brand teal that the photo reads as part of the
+  system rather than a snapshot dropped into a layout.
