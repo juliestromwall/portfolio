@@ -35,6 +35,7 @@
 
 ## Changelog
 
+- **2026-08-21:** Deployment moved to Cloudflare Pages — auto-deploys from `main` on push, replacing the manual Hostinger zip upload (`docs/DEPLOY.md`, `.nvmrc`)
 - **2026-08-21:** Business card finalized — icon rail (Build / Launch / Support, wrench for Support), no photo
 - **2026-08-21:** Business card — full-bleed photo panel, left accent bar removed, text shifted left, photo widened to 1.55"
 - **2026-08-21:** Business card — four photo treatments (small circle, large circle, full-bleed panel, faded panel)

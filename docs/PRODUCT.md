@@ -9,7 +9,7 @@ Personal portfolio website for Julie Stromwall, Product Manager. Showcases profe
 - **Framework:** Next.js 16 (App Router, static export)
 - **Styling:** Tailwind CSS v4 with custom theme colors
 - **Font:** Inter (Google Fonts)
-- **Hosting:** Hostinger shared hosting (static files) → juliestromwall.com
+- **Hosting:** Cloudflare Pages — auto-deploys from `main` on push → juliestromwall.com (see `docs/DEPLOY.md`)
 - **Repo:** https://github.com/juliestromwall/portfolio
 
 ## Pages
