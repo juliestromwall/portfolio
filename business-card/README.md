@@ -3,18 +3,19 @@
 Black card, double-sided. Back is the `js.` monogram on charcoal in every variant. The right
 third of the front is a swappable panel — photo or graphic — driven by a class on `.front`.
 
-**Currently choosing a layout** — four arrangements of the same elements (name, positioning
-line, contact, Build/Launch/Support icon trio), compared in `preview-layouts.png`.
+**Currently choosing a design direction.** `card-explore.html` holds four unrelated
+directions — different typefaces, palettes, and structures — compared in
+`preview-directions.png`. `card.html` holds the earlier Inter/teal system and its variants.
 
 ## Files
 
 | PDF | Use |
 |---|---|
+| `dir-A-editorial-serif_PRINT-with-bleed.pdf` | Fraunces on cream, hairline rules, italic kicker |
+| `dir-B-spec-sheet_PRINT-with-bleed.pdf` | IBM Plex Mono, key/value rows on near-black |
+| `dir-C-colour-block_PRINT-with-bleed.pdf` | Anton on a full terracotta field |
+| `dir-D-swiss-grid_PRINT-with-bleed.pdf` | Archivo Narrow, hairline column grid on cream |
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
-| `option-lay1-footer_PRINT-with-bleed.pdf` | Icon trio as a footer row under a hairline |
-| `option-lay2-center_PRINT-with-bleed.pdf` | Everything centred, trio through the middle |
-| `option-lay3-mirror_PRINT-with-bleed.pdf` | Icon rail on the left, text to its right |
-| `option-lay4-stack_PRINT-with-bleed.pdf` | Single column, big name, trio as a row |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
 
 | Other file | Use |
@@ -46,6 +47,18 @@ line, contact, Build/Launch/Support icon trio), compared in `preview-layouts.png
 > **Support icon.** Currently a headset. A wrench, chat bubble, and shield were also mocked
 > up and read clearly at 0.155" — swap the third `<svg>` in `.icons` to change it.
 
+
+## Two source files
+
+- `card-explore.html` — the four new directions (A/B/C/D). Each is a self-contained pair of
+  `.card` sections; there is no shared variant system, deliberately, so they can diverge.
+- `card.html` — the earlier Inter/teal/charcoal system with its `lay-*`, `art-*`, and
+  `photo-*` variants.
+
+Fonts come from Google Fonts at render time: Fraunces, IBM Plex Mono, Anton, Archivo Narrow.
+
+> **`Est. Colorado`** on the back of direction A is copy I wrote, inferred from the 970 area
+> code. Change or drop it — it is not sourced from anything you gave me.
 
 ## Editing
 
