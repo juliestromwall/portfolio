@@ -35,6 +35,7 @@
 
 ## Changelog
 
+- **2026-08-21:** Copy rewritten in a more direct voice across hero, about bio, all four capability cards, approach quote, and contact; hero photo added (`public/photo.jpg`) — it had been 404ing and showing the placeholder fallback
 - **2026-08-21:** Deployment moved to Cloudflare Pages — auto-deploys from `main` on push, replacing the manual Hostinger zip upload (`docs/DEPLOY.md`, `.nvmrc`)
 - **2026-08-21:** Business card finalized — icon rail (Build / Launch / Support, wrench for Support), no photo
 - **2026-08-21:** Business card — full-bleed photo panel, left accent bar removed, text shifted left, photo widened to 1.55"

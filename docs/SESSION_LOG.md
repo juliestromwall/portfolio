@@ -1,5 +1,26 @@
 # Session Log
 
+## 2026-08-21
+
+**Worked on:** Moved deployment to Cloudflare Pages, rewrote site copy, fixed the missing hero photo.
+
+**Changes made:**
+- Deployment moved off Hostinger zip uploads to Cloudflare Pages auto-deploy from `main`
+- Added `.nvmrc` (Node 22) so the Cloudflare build doesn't fall back to the platform default
+- Wrote `docs/DEPLOY.md` with the one-time dashboard, DNS, and custom-domain steps
+- Rewrote copy in a more direct voice: hero line, both about columns, all four capability cards, the approach quote ("Relentless" replacing "Effective"), and the contact blurb
+- Added `public/photo.jpg` from the existing `business-card/julie-headshot.jpg` (1200x1200, exact fit for the square hero container) — the hero had been rendering the "Drop photo.jpg in /public" fallback
+- Verified in Chromium: build clean, all sections render, only one failed request remains
+
+**Next steps:**
+- Do the Cloudflare one-time setup in the dashboard (see `docs/DEPLOY.md`) — create the Pages project, then move nameservers, then attach the domain
+- **Check MX/TXT records carry over when moving DNS**, or mail to hello@juliestromwall.com breaks
+- Decide on `client-dashboard.png`: supply the screenshot or drop that slide from the Medical Records project
+- Work section adjustments (deferred this session)
+
+**Open questions:**
+- Does the Medical Records client-dashboard screenshot exist anywhere, or should the slide go?
+
 ## 2026-02-16
 
 **Worked on:** Updated RepCommish project card — new screenshots, renamed project, rewrote description to reflect founder role.
