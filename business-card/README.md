@@ -3,8 +3,8 @@
 Black card, double-sided. Back is the `js.` monogram on charcoal in every variant. The right
 third of the front is a swappable panel — photo or graphic — driven by a class on `.front`.
 
-**Currently deciding between four photo-free fronts** (`option-*_PRINT-with-bleed.pdf`,
-compared in `preview-art-options.png`). The photo versions are kept below in case they come back.
+**Currently deciding between two rail fronts** (`option-rail-*`, compared in
+`preview-rail-options.png`). The photo versions are kept below in case they come back.
 
 ## Files
 
@@ -13,10 +13,8 @@ compared in `preview-art-options.png`). The photo versions are kept below in cas
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
 | `card-final-teal-edge_*.pdf` | Alternate: adds a teal hairline where the photo meets the black. |
-| `option-A-monogram_PRINT-with-bleed.pdf` | Photo-free: oversized `js.` cropped by the right edge |
-| `option-B-browser_PRINT-with-bleed.pdf` | Photo-free: abstract browser window |
-| `option-C-rail_PRINT-with-bleed.pdf` | Photo-free: 01 Build / 02 Launch / 03 Support rail |
-| `option-D-terminal_PRINT-with-bleed.pdf` | Photo-free: terminal |
+| `option-rail-clean_*.pdf` | 01 Build / 02 Launch / 03 Support, no tagline |
+| `option-rail-detail_*.pdf` | Same rail, each step with a one-line descriptor |
 
 | Other file | Use |
 |---|---|
@@ -62,12 +60,14 @@ class="card front dark photo-panel no-edge"   <- what ships
 | `art-mono` | oversized `js.` monogram, cropped by the right edge |
 | `art-browser` | abstract browser window |
 | `art-rail` | 01 Build / 02 Launch / 03 Support rail |
+| `art-rail2` | same rail plus a descriptor under each step (widens the panel to 1.5in) |
+| `no-tag` | hides the "Built, launched, and supported." line |
 | `art-term` | terminal |
 
 Any `art-*` class hides the photo and the left accent bar automatically. `--art-w` in
 `:root` controls the panel width.
 
-> **If option C ships, delete the `.tag` line.** "Built, launched, and supported." and
+> **The rail fronts always pair with `no-tag`.** "Built, launched, and supported." and
 > "01 Build / 02 Launch / 03 Support" say the same thing twice.
 
 `--panel-w` in `:root` controls how wide the photo is; `--bleed` set to `0in` yields the
