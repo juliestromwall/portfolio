@@ -13,7 +13,10 @@ directions — different typefaces, palettes, and structures — compared in
 |---|---|
 | `dir-A-editorial-serif_*.pdf` | Fraunces on cream, hairline rules, italic kicker |
 | `dir-B-spec-sheet_*.pdf` | IBM Plex Mono, key/value rows on near-black |
-| `dir-C-black_*.pdf` | Direction C recoloured black — terracotta kicker, teal services |
+| `dir-C-black_back-cream_*.pdf` | **Front-runner.** Black front, cream back, mark set at 1.45" |
+| `dir-C-black_back-white_*.pdf` | Same, pure white back |
+| `dir-C-black_back-oat_*.pdf` | Same, oat `#EAE4D9` back |
+| `dir-C-black_back-stone_*.pdf` | Same, warm stone `#DBD4C8` back |
 | `dir-C-colour-block_*.pdf` | Anton on a full terracotta field |
 | `dir-D-swiss-grid_*.pdf` | Archivo Narrow, hairline column grid on cream |
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
@@ -57,6 +60,11 @@ directions — different typefaces, palettes, and structures — compared in
   `photo-*` variants.
 
 Fonts come from Google Fonts at render time: Fraunces, IBM Plex Mono, Anton, Archivo Narrow.
+
+> **Cheaper option worth asking about.** If you print on uncoated cream or oat stock, the
+> back can be the bare stock colour with just the mark — one less ink pass, and the texture
+> shows through. Ask the printer what stock colours they carry before committing to a
+> flood-printed back.
 
 > **Don't put the mark on a terracotta field.** Its terracotta dot matches the background and
 > bites a notch out of the disc, which reads as a printing defect. Charcoal or cream only.
