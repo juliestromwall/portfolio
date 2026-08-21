@@ -3,8 +3,8 @@
 Black card, double-sided. Back is the `js.` monogram on charcoal in every variant. The right
 third of the front is a swappable panel — photo or graphic — driven by a class on `.front`.
 
-**Currently deciding between two rail fronts** (`option-rail-*`, compared in
-`preview-rail-options.png`). The photo versions are kept below in case they come back.
+**Currently deciding between three less-wordy service fronts** (`option-E/F/G`, compared in
+`preview-redesign.png`). Photo variants are kept in `card.html` in case they come back.
 
 ## Files
 
@@ -13,8 +13,9 @@ third of the front is a swappable panel — photo or graphic — driven by a cla
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
 | `card-final-teal-edge_*.pdf` | Alternate: adds a teal hairline where the photo meets the black. |
-| `option-rail-clean_*.pdf` | 01 Build / 02 Launch / 03 Support, no tagline |
-| `option-rail-detail_*.pdf` | Same rail, each step with a one-line descriptor |
+| `option-E-icons_*.pdf` | Icon + word rail — no numbers, no descriptors |
+| `option-F-words_*.pdf` | Words only with dot markers, maximum air |
+| `option-G-band_*.pdf` | Services as a typographic band across the bottom |
 
 | Other file | Use |
 |---|---|
@@ -61,6 +62,9 @@ class="card front dark photo-panel no-edge"   <- what ships
 | `art-browser` | abstract browser window |
 | `art-rail` | 01 Build / 02 Launch / 03 Support rail |
 | `art-rail2` | same rail plus a descriptor under each step (widens the panel to 1.5in) |
+| `art-icons` | icon + word rail |
+| `art-words` | words only, dot markers |
+| `art-band` | services as a band across the bottom (no side panel) |
 | `no-tag` | hides the "Built, launched, and supported." line |
 | `art-term` | terminal |
 
