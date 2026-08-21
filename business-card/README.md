@@ -3,25 +3,25 @@
 Black card, double-sided. Back is the `js.` monogram on charcoal in every variant. The right
 third of the front is a swappable panel — photo or graphic — driven by a class on `.front`.
 
-**Shipping:** `card-final_*` — black card, icon rail (Build / Launch / Support), monogram back.
-Other variants stay in `card.html` behind classes, including the photo versions.
+**Currently choosing a layout** — four arrangements of the same elements (name, positioning
+line, contact, Build/Launch/Support icon trio), compared in `preview-layouts.png`.
 
 ## Files
 
 | PDF | Use |
 |---|---|
 | `card-final_PRINT-with-bleed.pdf` | **Send this to the printer.** 3.75×2.25" (3.5×2 trim + 0.125" bleed). p1 front, p2 back. |
+| `option-lay1-footer_PRINT-with-bleed.pdf` | Icon trio as a footer row under a hairline |
+| `option-lay2-center_PRINT-with-bleed.pdf` | Everything centred, trio through the middle |
+| `option-lay3-mirror_PRINT-with-bleed.pdf` | Icon rail on the left, text to its right |
+| `option-lay4-stack_PRINT-with-bleed.pdf` | Single column, big name, trio as a row |
 | `card-final_TRIM-3.5x2.pdf` | Exact 3.5×2", no bleed. Only if the printer asks for trim size. |
-| `option-sig1-panel_*.pdf` | Signature as a sign-off under the rail |
-| `option-sig2-rule_*.pdf` | Signature in place of the terracotta rule |
-| `option-sig3-back_*.pdf` | Signature on the back under the monogram |
 
 | Other file | Use |
 |---|---|
 | `preview-final.png` | Front + back at trim size — what you actually get after cutting |
 | `card.html` | Source. Photos embedded as base64, so it's self-contained. |
 | `julie-headshot*.{jpg,png}` | Cropped headshots (square, circular, panel) for reuse elsewhere |
-| `signature-cream.png` / `signature-charcoal.png` | Signature knocked out to transparency, for reuse elsewhere |
 
 ## Print specs
 
@@ -46,11 +46,6 @@ Other variants stay in `card.html` behind classes, including the photo versions.
 > **Support icon.** Currently a headset. A wrench, chat bubble, and shield were also mocked
 > up and read clearly at 0.155" — swap the third `<svg>` in `.icons` to change it.
 
-> **Signature resolution.** The source is 314×138 px with only 214×100 px of actual ink, so
-> real detail is ~214 dpi-inches. It stays above the 300 dpi print minimum up to **0.71in
-> wide** and no further. The placements use 0.58in (`sig-rule`), 0.62in (`sig-panel`), and
-> 0.80in (`sig-back`, marginally soft — fine for a hand mark, but a higher-res scan would be
-> better if the signature ever goes bigger than this).
 
 ## Editing
 
@@ -74,9 +69,13 @@ class="card front dark art-icons no-tag"   <- what ships
 | `art-icons` | icon + word rail |
 | `art-words` | words only, dot markers |
 | `art-band` | services as a band across the bottom (no side panel) |
-| `sig-rule` | handwritten signature replaces the terracotta rule |
-| `sig-panel` | signature as a sign-off under the icon rail |
-| `sig-back` | signature on the back under the monogram (goes on `.back`, not `.front`) |
+| `lay-footer` | icon trio as a footer row |
+| `lay-center` | everything centred |
+| `lay-mirror` | icon rail on the left |
+| `lay-stack` | single column, big name |
+
+The `lay-*` classes use a standalone `.trio` element rather than the `.art` panel, so they
+reposition the icons freely; each `lay-*` hides `.art`, `.spine`, and `.photo` automatically.
 | `no-tag` | hides the "Built, launched, and supported." line |
 | `art-term` | terminal |
 
